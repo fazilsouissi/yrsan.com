@@ -210,7 +210,7 @@
       display: grid;
       place-items: end start;
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.2) 100%), url('./public/SOIE/Florem%20S%20Lux%20Beige1-46.jpg') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.2) 100%), url('./CACHEMIRE/Florem%20C%20P1%20-15-2.jpg') center/cover no-repeat;
       background-attachment: fixed
     }
 
@@ -468,7 +468,7 @@
       text-align: right;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(110deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%), url('./public/LAINE/Florem%20L-32.jpg') center/cover no-repeat;
+      background: linear-gradient(110deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%), url('./LAINE/Florem%20L-32.jpg') center/cover no-repeat;
       background-attachment: fixed
     }
 
@@ -894,7 +894,7 @@
   <main class="container">
     <!-- Mosaic éditoriale -->
     <section class="mosaic">
-      <a class="tile" href="#selection" style="background-image:url('./public/CACHEMIRE/Khat%20CQ%20MultiCol1-80.jpg')">
+      <a class="tile" href="#selection" style="background-image:url('./CACHEMIRE/Khat%20CQ%20MultiCol1-80.jpg')">
         <div class="tile__meta">
           <div class="tile__eyebrow">Collection</div>
           <div class="tile__title">Cachemire Qualité</div>
@@ -902,7 +902,7 @@
         </div>
       </a>
       <a class="tile" href="#selection"
-        style="background-image:url('./public/CACHEMIRE/Elef%20C%20vif%20Emerald1-71.jpg')">
+        style="background-image:url('./CACHEMIRE/Elef%20C%20vif%20Emerald1-71.jpg')">
         <div class="tile__meta">
           <div class="tile__eyebrow">Collection</div>
           <div class="tile__title">Pulls Cachemire</div>
@@ -919,7 +919,7 @@
       </div>
       <div class="grid">
         <article class="card">
-          <div class="card__media" style="background-image:url('./public/CACHEMIRE/Florem%20C%20P-14.jpg')"></div>
+          <div class="card__media" style="background-image:url('./CACHEMIRE/Florem%20C%20P-14.jpg')"></div>
           <div class="card__body">
             <div class="muted">C‑Florem</div>
             <div class="card__title">Fleur</div>
@@ -927,7 +927,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card__media" style="background-image:url('./public/CACHEMIRE/Khat%20C%20Black%20White1-95.jpg')">
+          <div class="card__media" style="background-image:url('./CACHEMIRE/Khat%20C%20Black%20White1-95.jpg')">
           </div>
           <div class="card__body">
             <div class="muted">C‑Khat</div>
@@ -936,7 +936,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card__media" style="background-image:url('./public/LAINE/Florem%20L-31.jpg')"></div>
+          <div class="card__media" style="background-image:url('./LAINE/Florem%20L-31.jpg')"></div>
           <div class="card__body">
             <div class="muted">Laine</div>
             <div class="card__title">Florem</div>
@@ -944,7 +944,7 @@
           </div>
         </article>
         <article class="card">
-          <div class="card__media" style="background-image:url('./public/SOIE/Karld%20S%20DF%20White%20Mauve-59.jpg')">
+          <div class="card__media" style="background-image:url('./SOIE/Karld%20S%20DF%20White%20Mauve-59.jpg')">
           </div>
           <div class="card__body">
             <div class="muted">Soie</div>
@@ -975,7 +975,7 @@
     <section>
       <div class="services">
         <div class="service">
-          <div class="service__img" style="background-image:url('./public/CACHEMIRE/Khat%20CQ%20MultiCol1-80.jpg')">
+          <div class="service__img" style="background-image:url('./CACHEMIRE/Khat%20CQ%20MultiCol1-80.jpg')">
           </div>
           <div>
             <div class="service__title">Cachemire durable & de qualité</div>
@@ -983,14 +983,14 @@
           </div>
         </div>
         <div class="service">
-          <div class="service__img" style="background-image:url('./public/LAINE/Florem%20L-32.jpg')"></div>
+          <div class="service__img" style="background-image:url('./LAINE/Florem%20L-32.jpg')"></div>
           <div>
             <div class="service__title">Ateliers & finitions</div>
             <div class="muted">Bordures, broderies, mélanges soyeux.</div>
           </div>
         </div>
         <div class="service">
-          <div class="service__img" style="background-image:url('./public/SOIE/Karld%20S%20DF%20White%20Mauve-59.jpg')">
+          <div class="service__img" style="background-image:url('./SOIE/Karld%20S%20DF%20White%20Mauve-59.jpg')">
           </div>
           <div>
             <div class="service__title">B2B & Odoo</div>
@@ -1094,7 +1094,7 @@
     // Alimente le carrousel à partir de public/catalog.json si présent
     (async function () {
       try {
-        const res = await fetch('./public/catalog.json');
+        const res = await fetch('./catalog.json');
         if (!res.ok) return;
         const data = await res.json();
         const list = Array.isArray(data) ? data.slice(0, 10) : [];
@@ -1102,7 +1102,7 @@
         list.forEach(item => {
           const el = document.createElement('article');
           el.className = 'carousel__item';
-          const imgPath = item.image ? './public' + item.image : './public/file.svg';
+          const imgPath = item.image ? '.' + item.image : './file.svg';
           const price = (item.price_eur != null) ? new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(item.price_eur) : '';
           el.innerHTML = `
               <div class=\"card__media\" style=\"aspect-ratio:4/5;background-image:url('${imgPath}')\"></div>
