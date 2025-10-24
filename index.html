@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>YRSAN — Vitrine Cachemire Soie Laine</title>
+  <meta name="description"
+    content="Vitrine B2B haut de gamme · Soie, Cachemire, Laine · Collections Hiver 2025/2026." />
+  <link rel="icon" href="/globe.svg" />
+  <style>
+    @font-face {
+      font-family: 'RicordiNobili';
+      src: url('/PoliceTT Ricordi Trial Nobili.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #fafafa;
+      --text: #1a1a1a;
+      --muted: #757575;
+      --border: #e0e0e0;
+      --accent: #d4af37;
+      --primary: #1a1a1a;
+      --secondary: #f5f5f5;
+      --success: #4caf50;
+      --warning: #ff9800;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(250, 250, 250, 0.95);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0 16px 10px
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px
+    }
+
+    .brand__title {
+      font-family: RicordiNobili, serif;
+      letter-spacing: .18em;
+      color: var(--accent);
+      font-size: 24px;
+      font-weight: 600
+    }
+
+    .brand__subtitle {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    nav {
+      display: flex;
+      gap: 24px
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: .06em;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.2s ease
+    }
+
+    nav a:hover {
+      background: var(--secondary);
+      color: var(--accent)
+    }
+
+    /* Menu Mobile */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px)
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px)
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 12px 0;
+        z-index: 39;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+      }
+
+      nav.active {
+        display: flex
+      }
+
+      nav a {
+        padding: 12px 20px;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border)
+      }
+
+      nav a:last-child {
+        border-bottom: none
+      }
+
+      .menu-toggle {
+        display: flex
+      }
+
+      .brand__subtitle {
+        display: none
+      }
+    }
+
+    /* HERO pleine largeur façon vitrine */
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      display: grid;
+      place-items: end start;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.2) 100%), url('./public/SOIE/Florem%20S%20Lux%20Beige1-46.jpg') center/cover no-repeat;
+      background-attachment: fixed
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.6) 100%);
+      pointer-events: none;
+      z-index: 1
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 40px 20px 56px
+    }
+
+    .hero__kicker {
+      font-size: 13px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
+    }
+
+    .hero__title {
+      font-family: RicordiNobili, serif;
+      font-size: clamp(28px, 5vw, 64px);
+      line-height: 1.05;
+      margin: 10px 0 0;
+      color: #fff;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6)
+    }
+
+    .hero__cta {
+      margin-top: 16px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1px solid #fff;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
+    }
+
+    .hero__cta:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: #fff
+    }
+
+    /* MOSAIC éditoriale */
+    section {
+      padding: 44px 0
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    @media (max-width: 900px) {
+      .mosaic {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 32px 0
+      }
+    }
+
+    .tile {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      min-height: 420px;
+      background: #f3f3f3 center/cover no-repeat
+    }
+
+    .tile::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+      z-index: 1
+    }
+
+    .tile__meta {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2
+    }
+
+    .tile__eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      color: rgba(255, 255, 255, 0.85);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5)
+    }
+
+    .tile__title {
+      margin: 8px 0;
+      font-family: RicordiNobili, serif;
+      font-size: 36px;
+      color: #fff;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6)
+    }
+
+    .tile__cta {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3)
+    }
+
+    .tile__cta:hover {
+      background: rgba(255, 255, 255, 0.25)
+    }
+
+    /* GRID produits */
+    .section__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px
+    }
+
+    .section__title h2 {
+      font-family: RicordiNobili, serif;
+      font-size: 28px;
+      margin: 0
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px
+    }
+
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+    }
+
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05)
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12)
+    }
+
+    .card__media {
+      aspect-ratio: 4/5;
+      background: #eee center/cover no-repeat;
+      position: relative;
+      overflow: hidden
+    }
+
+    .card__media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+      pointer-events: none
+    }
+
+    .card__body {
+      padding: 14px 14px 16px
+    }
+
+    .card__title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    .card__price {
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 15px
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    /* Bandeau plein écran */
+    .banner {
+      position: relative;
+      min-height: 60vh;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      text-align: right;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(110deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%), url('./public/LAINE/Florem%20L-32.jpg') center/cover no-repeat;
+      background-attachment: fixed
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, transparent 50%, transparent 100%);
+      z-index: 1
+    }
+
+    .banner__title {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      padding: 0 20px;
+      font-family: RicordiNobili, serif;
+      font-size: clamp(32px, 6vw, 72px);
+      letter-spacing: .08em;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5)
+    }
+
+    /* Carrousel simple */
+    .carousel {
+      overflow-x: auto;
+      display: flex;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 6px
+    }
+
+    .carousel::-webkit-scrollbar {
+      height: 6px
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: #cfcfcf;
+      border-radius: 6px
+    }
+
+    .carousel__item {
+      min-width: 260px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff
+    }
+
+    @media (max-width: 640px) {
+      .carousel__item {
+        min-width: 200px
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel__item {
+        min-width: 150px;
+        gap: 12px
+      }
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .service {
+      display: flex;
+      gap: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px
+    }
+
+    .service__img {
+      width: 90px;
+      aspect-ratio: 3/4;
+      background: #f0f0f0 center/cover no-repeat;
+      border: 1px solid var(--border)
+    }
+
+    .service__title {
+      font-weight: 600
+    }
+
+    /* Newsletter */
+    .newsletter {
+      margin-top: 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05)
+    }
+
+    .newsletter form {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .newsletter input[type=email] {
+      flex: 1 1 260px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      transition: all 0.2s ease
+    }
+
+    .newsletter input[type=email]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1)
+    }
+
+    .newsletter button {
+      padding: 12px 20px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #f5a623);
+      color: #1a1a1a;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2)
+    }
+
+    .newsletter button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3)
+    }
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--border);
+      padding: 26px 0 46px;
+      color: #666
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    @media (max-width: 900px) {
+      .footer-cols {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    .footer-cols ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0
+    }
+
+    .footer-cols a {
+      color: #444;
+      text-decoration: none
+    }
+
+    /* Modal Moderne */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease
+    }
+
+    .modal-overlay.show {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      animation: slideUp 0.3s ease;
+      position: relative
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--muted);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: all 0.2s ease
+    }
+
+    .modal-close:hover {
+      background: var(--secondary);
+      color: var(--text)
+    }
+
+    .modal-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), #f5a623);
+      color: #1a1a1a;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      text-transform: uppercase
+    }
+
+    .modal-title {
+      font-family: RicordiNobili, serif;
+      font-size: 32px;
+      margin: 16px 0 12px;
+      color: var(--primary)
+    }
+
+    .modal-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px
+    }
+
+    .modal-section {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .modal-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .modal-section-title {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px
+    }
+
+    .modal-section-text {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px
+    }
+
+    .modal-btn {
+      flex: 1;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      text-decoration: none
+    }
+
+    .modal-btn-primary {
+      background: linear-gradient(135deg, var(--accent), #f5a623);
+      color: #1a1a1a
+    }
+
+    .modal-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3)
+    }
+
+    .modal-btn-secondary {
+      background: var(--secondary);
+      color: var(--text);
+      border: 1px solid var(--border)
+    }
+
+    .modal-btn-secondary:hover {
+      background: var(--border)
+    }
+
+    @media (max-width: 640px) {
+      .modal-content {
+        padding: 28px 20px;
+        margin: 20px
+      }
+
+      .modal-title {
+        font-size: 24px
+      }
+
+      .modal-buttons {
+        flex-direction: column
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Modal Prototype -->
+  <div class="modal-overlay show" id="prototypeModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+
+      <span class="modal-badge">Prototype v0.1</span>
+      <h2 class="modal-title">Bienvenue sur YRSAN</h2>
+      <p class="modal-subtitle">Découvrez notre vitrine B2B premium · Soie, Cachemire, Laine</p>
+
+      <div class="modal-section">
+        <div class="modal-section-title">État du Projet</div>
+        <div class="modal-section-text">
+          Vous consultez actuellement une version prototype. La plateforme est en développement actif avec des
+          améliorations et nouvelles fonctionnalités déployées régulièrement.
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">En Cours de Développement</div>
+        <div class="modal-section-text">
+          • Pages produits détaillées avec contenu personnalisable<br />
+          • Système de paiement Stripe intégré<br />
+          • Panier d'achat et gestion des commandes<br />
+          • Dashboard administrateur<br />
+          • Intégration B2B avancée
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-section-title">Feedback</div>
+        <div class="modal-section-text">
+          Vos retours sont précieux pour améliorer la plateforme. N'hésitez pas à nous contacter avec vos suggestions et
+          observations.
+        </div>
+      </div>
+
+      <div class="modal-buttons">
+        <button class="modal-btn modal-btn-primary" id="closeModalBtn">Comprendre et continuer</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand__title">YRSAN</div>
+        <div class="brand__subtitle">Soie · Cachemire · Laine</div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="navMenu">
+        <a href="#femme">Femme</a>
+        <a href="#homme">Homme</a>
+        <a href="#excellence">Excellence</a>
+        <a href="#selection">Sélection</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO full-bleed -->
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__kicker">Hiver 2025·2026</div>
+      <h1 class="hero__title">Tendances · Cachemire & Soie</h1>
+      <a class="hero__cta" href="#selection">Découvrir</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Mosaic éditoriale -->
+    <section class="mosaic">
+      <a class="tile" href="#selection" style="background-image:url('./public/CACHEMIRE/Khat%20CQ%20MultiCol1-80.jpg')">
+        <div class="tile__meta">
+          <div class="tile__eyebrow">Collection</div>
+          <div class="tile__title">Cachemire Qualité</div>
+          <span class="tile__cta">Voir</span>
+        </div>
+      </a>
+      <a class="tile" href="#selection"
+        style="background-image:url('./public/CACHEMIRE/Elef%20C%20vif%20Emerald1-71.jpg')">
+        <div class="tile__meta">
+          <div class="tile__eyebrow">Collection</div>
+          <div class="tile__title">Pulls Cachemire</div>
+          <span class="tile__cta">Voir</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Grid produits court, façon vitrine -->
+    <section id="selection">
+      <div class="section__title">
+        <h2>Pulls cachemire</h2>
+        <span class="muted">Sélection</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="card__media" style="background-image:url('./public/CACHEMIRE/Florem%20C%20P-14.jpg')"></div>
+          <div class="card__body">
+            <div class="muted">C‑Florem</div>
+            <div class="card__title">Fleur</div>
+            <div class="card__price">60,00 €</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media" style="background-image:url('./public/CACHEMIRE/Khat%20C%20Black%20White1-95.jpg')">
+          </div>
+          <div class="card__body">
+            <div class="muted">C‑Khat</div>
+            <div class="card__title">Trait</div>
+            <div class="card__price">70,00 €</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media" style="background-image:url('./public/LAINE/Florem%20L-31.jpg')"></div>
+          <div class="card__body">
+            <div class="muted">Laine</div>
+            <div class="card__title">Florem</div>
+            <div class="card__price">70,00 €</div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__media" style="background-image:url('./public/SOIE/Karld%20S%20DF%20White%20Mauve-59.jpg')">
+          </div>
+          <div class="card__body">
+            <div class="muted">Soie</div>
+            <div class="card__title">Karld DF</div>
+            <div class="card__price">105,00 €</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Grand bandeau plein écran avec texte à droite -->
+    <section class="banner">
+      <h2 class="banner__title">PULLS CACHEMIRE</h2>
+    </section>
+
+    <!-- Carrousel "La sélection du moment" alimenté par catalog.json si présent -->
+    <section>
+      <div class="section__title">
+        <h2>La sélection du moment</h2>
+        <span class="muted">B2B — prix dès 30 pièces</span>
+      </div>
+      <div class="carousel" id="carousel">
+        <!-- JS injecte les items depuis /catalog.json -->
+      </div>
+    </section>
+
+    <!-- Services / Qualité -->
+    <section>
+      <div class="services">
+        <div class="service">
+          <div class="service__img" style="background-image:url('./public/book2_preview1.jpeg')"></div>
+          <div>
+            <div class="service__title">Cachemire durable & de qualité</div>
+            <div class="muted">Sélection des fibres, contrôle atelier.</div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="service__img" style="background-image:url('./public/hariwa.jpeg')"></div>
+          <div>
+            <div class="service__title">Ateliers & finitions</div>
+            <div class="muted">Bordures, broderies, mélanges soyeux.</div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="service__img" style="background-image:url('./public/book2_certificat.jpeg')"></div>
+          <div>
+            <div class="service__title">B2B & Odoo</div>
+            <div class="muted">Devis, stocks, QR‑facture — intégration phase 2.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="section__title">
+        <h2>Newsletter</h2><span class="muted">Collections & offres pros</span>
+      </div>
+      <form onsubmit="event.preventDefault(); this.reset(); alert('Merci, inscription enregistrée.');">
+        <input type="email" placeholder="Votre e‑mail" required />
+        <button type="submit">S’inscrire</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-cols">
+      <div>
+        <div class="service__title">Assistance</div>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Livraison</a></li>
+          <li><a href="#">Retours</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="service__title">À propos</div>
+        <ul>
+          <li><a href="#">Ateliers</a></li>
+          <li><a href="#">Durabilité</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="service__title">Légal</div>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:16px; color:#888">© YRSAN — Hiver 2025/2026 — Romandie & B2B</div>
+  </footer>
+
+  <script>
+    // Modal Prototype
+    const prototypeModal = document.getElementById('prototypeModal');
+    const closeModal = document.getElementById('closeModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    const closePrototypeModal = () => {
+      prototypeModal.classList.remove('show');
+      localStorage.setItem('prototypeModalClosed', 'true');
+    };
+
+    // Vérifier si le modal a déjà été fermé
+    if (localStorage.getItem('prototypeModalClosed') === 'true') {
+      prototypeModal.classList.remove('show');
+    }
+
+    closeModal?.addEventListener('click', closePrototypeModal);
+    closeModalBtn?.addEventListener('click', closePrototypeModal);
+
+    // Fermer le modal en cliquant sur l'overlay (mais pas le contenu)
+    prototypeModal?.addEventListener('click', (e) => {
+      if (e.target === prototypeModal) {
+        closePrototypeModal();
+      }
+    });
+
+    // Menu Mobile Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle?.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    document.querySelectorAll('#navMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Fermer le menu quand on clique ailleurs
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('header') && navMenu.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Alimente le carrousel à partir de public/catalog.json si présent
+    (async function () {
+      try {
+        const res = await fetch('./public/catalog.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        const list = Array.isArray(data) ? data.slice(0, 10) : [];
+        const root = document.getElementById('carousel');
+        list.forEach(item => {
+          const el = document.createElement('article');
+          el.className = 'carousel__item';
+          const imgPath = item.image ? './public' + item.image : './public/file.svg';
+          const price = (item.price_eur != null) ? new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(item.price_eur) : '';
+          el.innerHTML = `
+              <div class=\"card__media\" style=\"aspect-ratio:4/5;background-image:url('${imgPath}')\"></div>
+              <div class=\"card__body\">
+                <div class=\"muted\">${item.category || ''}</div>
+                <div class=\"card__title\">${item.name || ''}</div>
+                <div class=\"card__price\">${price}</div>
+              </div>`;
+          root.appendChild(el);
+        });
+      } catch (e) { console.error('Erreur carrousel:', e) }
+    })();
+  </script>
+</body>
+
+</html>
